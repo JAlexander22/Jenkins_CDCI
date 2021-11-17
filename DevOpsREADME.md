@@ -54,3 +54,18 @@ On GitHub:
 - Generate another public/private key pay and put public key {ssh-keygen -t rsa -b 4096 -C "{Github email}"}
   - Public key (key.pub) on GitHub repository
   - private Key on Jenkins
+```
+
+```
+Jenkins Commands
+su - root
+  ls
+  rm -rf Jenkins_CDCI
+  git clone https://github.com/JAlexander22/Jenkins_CDCI.git
+  cd Jenkins_CDCI
+  ls
+  chmod 777 provision.sh
+  ./provision.sh
+  cd app
+  npm install
+  ```
