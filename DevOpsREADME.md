@@ -1,5 +1,5 @@
 # UNDERSTANDING OF CD/CI
-lololololol
+
 ### DEVOPS LIFECYLE
 A Continuous Cycle of:
 - `Plan` - `Code` - `Build` - `Test` - `Release` - `Deploy` - `Operate` - `Monitor`
