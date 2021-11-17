@@ -19,19 +19,19 @@ source ~/.bashrc
 
 #Removes nginx default file and replaces with own default file from home dir
 sudo rm -rf /etc/nginx/sites-available/default
-sudo ln -s /home/vagrant/app/default /etc/nginx/sites-available/
+sudo ln -s /home/ubuntu/Jenkins_CDCI/default /etc/nginx/sites-available/
 
 #Restarts Nginx
 sudo systemctl restart nginx
 sudo systemctl enable nginx
 
 # Node seeds app for database
-node app/app/seeds/seed.js
-cd /home/vagrant/app/app
+#node app/app/seeds/seed.js
+#cd /home/vagrant/app/app
 
 #Intsalls npm and dependencies and does another node seed
-sudo npm install
-sudo npm install express
-node seeds/seed.js
+#sudo npm install
+#sudo npm install express
+#node seeds/seed.js
 
 #I have 2 node seeds because I am unsure which on works and which doesn't.
