@@ -55,10 +55,11 @@ On GitHub:
   - Public key (key.pub) on GitHub repository
   - private Key on Jenkins
 ```
+![](img/jenkins.png)
 
+## Automating with Jenkins
 
-##Automating with Jenkins
-![](img/cicd_jenkins.png)
+![](img/CICD.png)
 ### AWS Steps
 - Launch EC2 Instance on Ubuntu 18.04
 - Security Ports:
@@ -66,7 +67,7 @@ On GitHub:
   - Port 3000 for app
   - Port 80 for HTTP
 
-![](img/CICD.png)
+
 ### Jenkins Steps
 - Add description
 - 3 Builds online
@@ -95,4 +96,4 @@ ssh -A -o "StrictHostKeyChecking=no" ubuntu@3ec2instance << EOF
    	npm install
 EOF
   ```
-![](img/jenkins.png)
+![](img/cicd_jenkins.png)
