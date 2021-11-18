@@ -1,5 +1,5 @@
 # UNDERSTANDING OF CD/CI
-yes
+
 ### DEVOPS LIFECYLE
 A Continuous Cycle of:
 - `Plan` - `Code` - `Build` - `Test` - `Release` - `Deploy` - `Operate` - `Monitor`
@@ -56,16 +56,41 @@ On GitHub:
   - private Key on Jenkins
 ```
 
+
+##Automating with Jenkins
+
+### AWS Steps
+- Launch EC2 Instance on Ubuntu 18.04
+- Security Ports:
+  - Port 22 for Jenkins IP and MY_IP
+  - Port 3000 for app
+  - Port 80 for HTTP
+
+### Jenkins Steps
+- Add description
+- 3 Builds online
+- Add http://Githubaacount.Comm
+- Source Code Management
+  - Git: Add SSH git@github.com.git
+  - Add Credentials Key that liked with GitHub Webhook to desired Branch
+
+- SSH Agent
+  - Add Key.pem for AWS Instance linked
+
+- Execute Shell
 ```
-Jenkins Commands
-su - root
-  ls
-  rm -rf Jenkins_CDCI
-  git clone https://github.com/JAlexander22/Jenkins_CDCI.git
-  cd Jenkins_CDCI
-  ls
-  chmod 777 provision.sh
-  ./provision.sh
-  cd app
-  npm install
+ssh -A -o "StrictHostKeyChecking=no" ubuntu@3ec2instance << EOF
+    sudo echo 'export DB_HOST="mongodb://DB_IP:27017/posts"' >> .bashrc
+    source ~/.bashrc
+    ls
+    # rm -rf git_clone_dir (If Gitclone has been done before)
+    git clone https://githubaccount.com
+    cd git_clone_dir
+    ls
+    chmod 777 provision.sh
+    ./provision.sh
+    cd app
+    sudo apt install npm -y
+   	npm install
+EOF
   ```
