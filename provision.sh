@@ -11,7 +11,7 @@ sudo apt-get install python-software-properties -y
 #Finds a specific verison of Nodejs and installs it again and with pm2
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install nodejs -y
-npm install pm2 -g
+sudo npm install pm2 -g
 
 #Creates a environment variable and stores in .bashrc file
 #sudo echo 'export DB_HOST="mongodb://10.108.1.114:27017/posts"' >> .bashrc
@@ -30,7 +30,7 @@ sudo systemctl enable nginx
 #cd /home/vagrant/app/app
 
 #Intsalls npm and dependencies and does another node seed
-#sudo npm install
+#snpm install
 #sudo npm install express
 #node seeds/seed.js
 
