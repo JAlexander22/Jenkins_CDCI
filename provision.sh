@@ -18,12 +18,12 @@ npm install pm2 -g
 #source ~/.bashrc
 
 #Removes nginx default file and replaces with own default file from home dir
-rm -rf /etc/nginx/sites-available/default
-ln -s /home/ubuntu/Jenkins_CDCI/default /etc/nginx/sites-available/
+sudo rm -rf /etc/nginx/sites-available/default
+sudo ln -s /home/ubuntu/Jenkins_CDCI/default /etc/nginx/sites-available/
 
 #Restarts Nginx
-systemctl restart nginx
-systemctl enable nginx
+sudo systemctl restart nginx
+sudo systemctl enable nginx
 
 # Node seeds app for database
 #node app/app/seeds/seed.js
